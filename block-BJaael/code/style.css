@@ -28,9 +28,6 @@ ul {
 ol,
 ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 img {
@@ -38,9 +35,19 @@ img {
   height: auto;
 }
 
+.boxes {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .box {
   width: 4rem;
   height: 4rem;
   border: 1px solid black;
 }
-
+.container {
+  max-width: 1440px;
+}
