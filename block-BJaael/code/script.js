@@ -1,17 +1,3 @@
-let ul = document.querySelector('ul');
-
-let ol = document.createElement('ol');
-
-function get_number() {
-    var letters = ['0','1','2','3','4','5','6','7','8','9'];
-    var number = 0;
-    for (var i = 0; i < 2; i++ ) {
-        let randomNumber = Math.floor(Math.random() * 3);
-        number += letters[randomNumber];
-    }
-    if (number <= 500) return number;
-}
-
 
 function get_random_color() {
     var letters = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
@@ -24,19 +10,35 @@ function get_random_color() {
 }
 
 
-function handlerClick() {
-    let randonColor = get_random_color();
-    ol.style.backgroundColor = randonColor;
+function randomNumber(max) {
+    return (Math.round(Math.random() * max));
 }
 
 
 
-ol.classList.add('box');
+let allboxes = document.querySelectorAll('.box');
+
+function handleMouseMove() {
+    allboxes.forEach(box => {
+        box.style.backgroundColor = get_random_color;
+        box.querySelector('h3').innerText = randomNumber(500);
+    });
+}
+
+
+let parentBox = document.querySelector(".boxes")
+
 
 for(let i = 0; i < 500; i++) {
-    ol.innerText = get_number();
+    let div = document.createElement('div');
+    div.classList.add('box');
+    let h3 = document.createElement('h3');
+    let randomNum = randomNumber(500);
+    h3.innerText = randomNum;
+    div.append(h3);
+    parentBox.append(div);
 }
 
-ol.addEventListener("mousemove", handlerClick);
 
-ul.append(ol);
+parentBox.addEventListener('mousemove', handleMouseMove);
+
