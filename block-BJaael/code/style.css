@@ -34,20 +34,15 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.boxes {
-  width: 4rem;
-  height: 4rem;
-  border: 1px solid black;
+.boxes{
   display: flex;
   flex-wrap: wrap;
 }
-
 .box {
   width: 4rem;
   height: 4rem;
   border: 1px solid black;
 }
 .container {
-  max-width: 1440px;
+  width: 100%;
 }
