@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper and Scissors</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <nav>
-      <!-- Rock -->
-      <a href="#"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></a>
-      <!-- Paper -->
-      <a href="#"></a><i class="fa fa-hand-paper-o" aria-hidden="true"></i></a>
-      <!-- Scissors -->
-      <a href="#"></a><i class="fa fa-hand-scissors-o" aria-hidden="true"></i></a>
-    </nav>
+    <div class="main">
+      <h1>Rock Paper and Scissors</h1>
+      <button class="reset">RESET</button>
+      <div class="user">
+        <h2>You</h2>
+        <ul class="usericon">
+        </ul>        
+      </div>
+      <div class="computer">
+        <h2>Computer</h2>
+        <ul class="computericon">
+        </ul>    
+      </div>
+      <div class="result"></div>
+    </div>      
     <script src="./script.js"></script>
   </body>
 </html>

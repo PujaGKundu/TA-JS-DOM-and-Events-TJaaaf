@@ -23,16 +23,54 @@ ul {
   padding: 0;
   font-weight: normal;
   text-align: center;
+  line-height: 1.5;
 }
 
 ol,
-ul {
+ul, 
+li {
   list-style: none;
 }
 
-nav {
-    font-size: larger;
+h1 {
+    background-color: deepskyblue;
+    padding: 12px;
     font-weight: 800;
-    color: darkblue;
+}
+
+.main {
+    margin: 16px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px 3px gray;
+    padding: 32px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    font-size: 64px;
+    font-weight: 800;
+    color: lightcoral;
     cursor: pointer;
+    padding: 32px;
+}
+
+.select {
+    color: black;
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+.result {
+    font-size: 32px;
+    font-weight: 700;
+    color: hotpink;
+    padding: 32px;
 }
