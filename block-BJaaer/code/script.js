@@ -10,13 +10,13 @@ function handleSubmit(event) {
     console.log('Handle submit');
     event.preventDefault();
     let elements = event.target.elements; 
-    userInfo.name = form.elements.name.value;
-    userInfo.email = form.elements.email.value;
-    userInfo.gender = form.elements.gender.value;
-    userInfo.color = form.elements.color.value;
-    userInfo.range = form.elements.range.value;
-    userInfo.drone = form.elements.drone.value;
-    userInfo.terms = form.elements.terms.checked;
+    userInfo.name = elements.name.value;
+    userInfo.email = elements.email.value;
+    userInfo.gender = elements.gender.value;
+    userInfo.color = elements.color.value;
+    userInfo.range = elements.range.value;
+    userInfo.drone = elements.drone.value;
+    userInfo.terms = elements.terms.checked;
     modal.classList.add("open");
     let close = document.querySelector(".modalClose");
     close.addEventListener('click', () => {

@@ -92,17 +92,13 @@ input[type='text'] {
   display: inline-block;
 }
 
-.modallose + .modalOverlay{
-  display: none;
-}
-
 .modalOverlay {
   display: none;
   position: absolute;
   top: 0;
   width: 100%;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 32px;
 }
 
