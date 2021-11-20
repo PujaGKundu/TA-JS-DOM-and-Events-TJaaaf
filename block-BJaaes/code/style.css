@@ -90,11 +90,13 @@ p {
 .success input{
   border: 3px solid green;
   border-radius: 2px;
+  color: green;
 }
 
 .error input{
   border: 3px solid red;
   border-radius: 2px;
+  color: red;
 }
 
 small{

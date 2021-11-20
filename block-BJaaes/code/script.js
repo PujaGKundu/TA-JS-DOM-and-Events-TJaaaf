@@ -5,6 +5,10 @@ function containNumber(string) {
     return string.split('').some(e => Number(e));
 }
 
+function containLetter(value) {
+    return string.split('').some(e => String(e));
+}
+
 function handleSubmit(event) {
     event.preventDefault();
     let usernameElm = event.target.elements.username;
@@ -24,7 +28,7 @@ function handleSubmit(event) {
         usernameError = "Can't be empty";
         parentElm.classList.add("error");
     } else if (usernameElm.value.length < 4) {
-        usernameError = "Can't be less than 4 characters";
+        usernameError = "Name can't be less than 4 characters";
         parentElm.classList.add("error");
     } else {
         usernameError = "";
@@ -36,7 +40,7 @@ function handleSubmit(event) {
         nameError = "Can't be empty";
         parentElm1.classList.add("error");
     } else if (containNumber(nameElm.value)) {
-        nameError = "Can't be a number";
+        nameError = "You can't use number in the name field";
         parentElm1.classList.add("error");
     } else {
         nameError = "";
@@ -44,11 +48,11 @@ function handleSubmit(event) {
         parentElm1.classList.remove("error");
     }
 
-    if (!emailElm.value.includes("@")) {
-        emailError = "Must include @";
+    if (!emailElm.includes("@")) {
+        emailError = "Not a valid email";
         parentElm2.classList.add("error");
-    } else if (emailElm.value.split('@').length <= 6){
-        emailError = "Email must contain minimum 6 characters";
+    } else if (emailElm.length < 6){
+        emailError = "Not a valid email";
         parentElm2.classList.add("error");
     } else {
         emailError = "";
@@ -59,6 +63,9 @@ function handleSubmit(event) {
     if (!phoneElm.value.length >= 7 || phoneElm.value.length <=10) {
         phoneError = "Number should be more than 7 and less than 10";
         parentElm3.classList.add("error");
+    } else if (containLetter(phoneElm.value)) {
+        nameError = "Phone number can only contain numbers";
+        parentElm1.classList.add("error");
     } else {
         phoneError = "";
         parentElm3.classList.add("success");
