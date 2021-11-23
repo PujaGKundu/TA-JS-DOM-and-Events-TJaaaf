@@ -1,7 +1,5 @@
 let form = document.querySelector("form");
 
-
-
 let ul = document.querySelector('ul');
 
 function handleSubmit(event) {
