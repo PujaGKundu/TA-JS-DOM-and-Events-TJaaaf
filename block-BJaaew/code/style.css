@@ -18,6 +18,7 @@ li {
   max-width: 1480px;
   margin: auto 0;
   padding: 1rem;
+  flex: 1 1 50%;
 }
 
 .box {
@@ -96,3 +97,8 @@ button:hover, a:hover {
   color: black;
 }
 
+.active {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
